@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="hr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smotra radova</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        * {
+            margin: auto;
+            width: 1200px;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        header,
+        main,
+        footer {
+            padding: 20px;
+            text-align: center;
+        }
+
+        header {
+            background-color: #f0f0f0;
+        }
+
+        main {
+            margin-top: 20px;
+        }
+
+        form {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            text-align: left;
+        }
+
+        input[type="text"],
+        textarea {
+            width: calc(100% - 20px);
+            /* Adjusted width to accommodate padding */
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            border-radius: 5px;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        img {
+            width: 100%;
+            max-width: 800px;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Smotra radova 2024</h1>
+        <p>Pozivamo sve učenike da se prijave na smotru najboljih radova.</p>
+        <i class="fas fa-arrow-left" id="openFormIcon"></i>
+    </header>
+    <img src="WSC-smotre-2024-glasovanje-768x513.jpg" alt="">
+
+    <h3>
+        Sukladno Pravilima i uputama za organizaciju i provedbu WorldSkills Croatia smotri radova učenika strukovnih
+        škola u školskoj godini 2023./2024. Agencija za strukovno obrazovanje i obrazovanje odraslih je zaprimila
+        prijave strukovnih škola te je Prosudbeno povjerenstvo odabralo najbolje radove za sljedeće smotre radova
+        učenika strukovnih škola:
+    </h3>
+    <ul>
+        <li>WSC smotra radova za učenike s teškoćama</li>
+        <li>WSC smotra Vježbeničkih tvrtki (VT)</li>
+        <li>WSC međusektorska smotra učeničkoga stvaralaštva koja pokriva sljedeće obrazovne sektore:
+            <ul>
+                <li>Šumarstvo, prerada i obrada drva</li>
+                <li>Elektrotehnika i računalstvo</li>
+                <li>Strojarstvo, brodogradnja i metalurgija</li>
+                <li>Graditeljstvo, geodezija i arhitektura</li>
+                <li>Grafičke tehnologije i audiovizualne tehnologije.</li>
+            </ul>
+        </li>
+    </ul>
+    <main id="formContainer" style="display: none;">
+        <form id="submissionForm">
+            <label for="name">Ime i prezime:</label>
+            <input type="text" id="name" name="name" required>
+            <label for="school">Škola:</label>
+            <input type="text" id="school" name="school" required>
+            <label for="workTitle">Naslov rada:</label>
+            <input type="text" id="workTitle" name="workTitle" required>
+            <label for="description">Opis rada:</label>
+            <textarea id="description" name="description" required></textarea>
+            <button type="submit" style="width: auto; margin-top: 10px;">Pošalji</button>
+        </form>
+    </main>
+    
+    <footer>
+        <p>&copy; 2024 Smotra radova. Sva prava pridržana.</p>
+    </footer>
+    <script>
+        document.getElementById('openFormIcon').addEventListener('click', function () {
+            var formContainer = document.getElementById('formContainer');
+            formContainer.style.display = (formContainer.style.display === 'none' || formContainer.style.display === '') ? 'block' : 'none';
+        });
+    </script>
+</body>
+
+</html>
