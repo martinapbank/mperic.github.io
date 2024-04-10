@@ -32,11 +32,28 @@ section {
 }
 
 footer {
-    background-color:#bf5959;
+    margin-top: 20px;
+    background-color: #bf5959;
     color: #fff;
     text-align: center;
     padding: 10px 0;
     position: fixed;
     bottom: 0;
     width: 100%;
+}
+
+button {
+    margin-bottom: 50px;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 20px auto;
+}
+
+iframe {
+    display: block;
+    margin: 20px auto;
 }
