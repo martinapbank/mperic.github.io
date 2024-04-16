@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!DOCTYPE html>
+    <html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Stranica sa odlomcima</title>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <style>
+            #odlomak2 {
+                display: none;
+            }
+        </style>
+    </head>
+
+    <body>
+
+        <h1>Naslov</h1>
+
+        <p id="odlomak1">Ovo je prvi odlomak.</p>
+
+        <p id="flip">Klikni za prikaz drugog odlomka</p>
+        <p id="odlomak2">Ovo je drugi odlomak.</p>
+
+        <button id="sakrijNaslov">Sakrij naslov</button>
+
+        <script>
+            $(document).ready(function () {
+                setInterval(function () {
+                    $('#odlomak1').toggle(1000);
+                }, 2000);
+
+                $('#sakrijNaslov').click(function () {
+                    $('h1').hide();
+                });
+                $("#flip").click(function () {
+                    $("#odlomak2").slideDown("slow");
+                });
+
+            });
+        </script>
+
+    </body>
+
+    </html>
+
+</body>
+
+</html>
